@@ -3,32 +3,32 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        sh 'checkout scm'
+        sh "checkout scm"
       }
     }
     stage('SAST') {
       steps {
-        sh 'echo SAST stage'
+        sh "echo SAST stage"
       }
     }
     stage('Build-and-Tag') {
       steps {
-        sh 'echo Build-and-Tag'
+        sh "echo Build-and-Tag"
       }
     }
     stage('Post-to-dockerhub') {
       steps {
-        sh 'echo post to dockerhub repo'
+        sh "echo post to dockerhub repo"
       }
     }
     stage('SECURITY-IMAGE-SCANNER') {
       steps {
-        sh 'exho pulling image ...'
+        sh "exho pulling image ..."
       }
     }
     stage('DAST') {
       steps {
-        sh 'echo dast scan for security'
+        sh "echo dast scan for security"
       }
     }
   }
