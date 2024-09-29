@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        checkout scm
+        sh 'checkout scm'
       }
     }
     stage('SAST') {
